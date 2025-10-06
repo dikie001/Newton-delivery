@@ -7,7 +7,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-purple-100">
       <div className="max-w-7xl mx-auto px-8 py-6">
         {/* Header */}
-        <header className="flex items-center justify-between mb-16">
+        <header className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2">
             <span className="text-3xl font-bold">
               <span className="text-yellow-500">N</span>
@@ -41,8 +41,8 @@ export default function LandingPage() {
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Text Content */}
-          <div className="space-y-6">
-            <h1 className="text-6xl font-bold leading-tight">
+          <div className="space-y-4">
+            <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
               <span className="text-indigo-400">Quick</span>
               <br />
               <span className="text-gray-900">delivery at</span>
@@ -56,7 +56,7 @@ export default function LandingPage() {
             </p>
 
             {/* Service Cards */}
-            <div className="flex gap-4 pt-8">
+            <div className="flex gap-4 pt-4">
               <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer bg-white border-0">
                 <div className="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-3">
                   <span className="text-3xl">🍔</span>
@@ -87,7 +87,7 @@ export default function LandingPage() {
                 <div className="w-10 h-10 bg-gradient-to-br from-pink-400 to-purple-400 rounded-full"></div>
                 <div>
                   <p className="font-semibold text-sm text-gray-900">
-                    John Smith
+                    Matilda Awino
                   </p>
                   <p className="text-xs text-gray-500">Fast delivery at home</p>
                   <div className="flex gap-0.5 mt-1">
@@ -107,11 +107,11 @@ export default function LandingPage() {
                 <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full"></div>
                 <div>
                   <p className="font-semibold text-sm text-gray-900">
-                    Jane Foster
+                    Ryanne Ochieng
                   </p>
                   <p className="text-xs text-gray-500">Super fast delivery</p>
                   <div className="flex gap-0.5 mt-1">
-                    {[...Array(5)].map((_, i) => (
+                    {[...Array(4)].map((_, i) => (
                       <Star
                         key={i}
                         className="w-3 h-3 fill-yellow-400 text-yellow-400"
