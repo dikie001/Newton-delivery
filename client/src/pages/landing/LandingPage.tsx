@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Search, MessageSquare, Star } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function LandingPage() {
+  const navigate = useNavigate()
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-purple-100">
       <div className="max-w-7xl mx-auto px-8 py-6">
