@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MessageSquare, Star } from "lucide-react";
 
-export default function LandingPage() {
+export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-purple-100">
       {/* Navbar */}
@@ -15,7 +15,7 @@ export default function LandingPage() {
           {/* Left Side - Text Content */}
           <div className="space-y-4">
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-              <span className="text-indigo-400">Quick</span>
+              <span className="text-blue-600">Quick</span>
               <br />
               <span className="text-gray-900">delivery at</span>
               <br />
@@ -95,11 +95,10 @@ export default function LandingPage() {
             </Card>
 
             {/* Main Illustration Placeholder */}
-            <div className="relative bg-gradient-to-br from-yellow-300 to-yellow-400 rounded-full w-[500px] h-[500px] mx-auto flex items-center justify-center">
+            <div className="relative bg-gradient-to-br from-blue-600 to-blue-800 rounded-full w-[500px] h-[500px] mx-auto flex items-center justify-center">
               <div className="text-center text-gray-700">
                 <div className="text-8xl mb-4">🛵</div>
-                <p className="text-lg font-semibold">Delivery Person</p>
-                <p className="text-sm">on Yellow Scooter</p>
+              
               </div>
             </div>
 

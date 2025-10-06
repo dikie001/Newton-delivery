@@ -1,6 +1,6 @@
-import { Search } from "lucide-react";
-import { Button } from "../ui/button";
+import { AlignJustify, Search } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Button } from "../ui/button";
 
 const Navbar = () => {
     const navigate = useNavigate()
@@ -13,9 +13,9 @@ const Navbar = () => {
       <header className="flex items-center justify-between  ">
         <div className="flex items-center gap-2">
           <span className="text-3xl font-bold">
-            <span className="text-yellow-500">N</span>
+            <span className="text-blue-600">N</span>
             <span className="text-gray-800">ewton </span>
-            <span className="text-yellow-500">D</span>
+            <span className="text-blue-600">D</span>
             <span className="text-gray-800">elivery</span>
           </span>
         </div>
@@ -32,8 +32,10 @@ const Navbar = () => {
           </Button>
         </nav>
 
-        <Button onClick={()=>navigate("request-pickup")} variant="default">Request Pickup</Button>
+        {/* <Button onClick={()=>navigate("request-pickup")} variant="default">Request Pickup</Button> */}
+      <AlignJustify/>
       </header>
+
     </div>
   );
 }
