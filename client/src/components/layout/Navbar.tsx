@@ -25,7 +25,7 @@ const Navbar = () => {
           open && "ml-56"
         } transition-all ease-in duration-300`}
       >
-        <div className="flex items-center gap-2 ml-8">
+        <div className="flex items-center gap-2 md:ml-8">
           <span className="text-3xl font-bold">
             <span className="text-blue-600">N</span>
             <span className="text-gray-800">ewton </span>
@@ -36,7 +36,7 @@ const Navbar = () => {
 
         {/* <Button onClick={()=>navigate("request-pickup")} variant="default">Request Pickup</Button> */}
         <AlignJustify
-          className="lg:hidden"
+          className="md:hidden"
           onClick={() => setOpenMobile(true)}
         />
       </header>

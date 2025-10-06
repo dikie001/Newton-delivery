@@ -1,24 +1,18 @@
-import {
-    Bike,
-    Calendar,
-    Home,
-    Inbox,
-    Search,
-    Settings
-} from "lucide-react";
+import { Bike, Calendar, Home, Inbox, Search, Settings } from "lucide-react";
 
 import {
-    Sidebar,
-    SidebarContent,
-    SidebarGroup,
-    SidebarGroupContent,
-    SidebarGroupLabel,
-    SidebarMenu,
-    SidebarMenuButton,
-    SidebarMenuItem,
-    SidebarTrigger,
-    useSidebar,
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarTrigger,
+  useSidebar,
 } from "@/components/ui/sidebar";
+import { useEffect, useState } from "react";
 
 // Menu items.
 const items = [
@@ -59,6 +53,7 @@ export function AppSidebar() {
     // isMobile,
     // toggleSidebar,
   } = useSidebar();
+
   return (
     <Sidebar
       variant="sidebar"
@@ -66,11 +61,15 @@ export function AppSidebar() {
       side="left"
       collapsible="icon"
     >
-      <div className="flex justify-center mt-6 items-center-safe">
-        <Bike className={`${!open && 'hidden'} ml-4`} />
+      <div className="flex  justify-center mt-5 mb-2 items-center-safe">
+        <Bike
+          className={`max-md:hidden   transition-all duration-2000 ${!open && "hidden "} ml-4`}
+        />
 
         <SidebarTrigger
-          className={`${open ? "ml-auto mr-4" : "mx-auto"} cursor-pointer`}
+          className={`hover:cursor-e-resize max-md:hidden ${
+            open ? "ml-auto mr-4" : "mx-auto"
+          } cursor-pointer`}
           size={"lg"}
         />
       </div>

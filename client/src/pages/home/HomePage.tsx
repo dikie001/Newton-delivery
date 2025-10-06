@@ -5,17 +5,27 @@ import { MessageSquare, Star, X } from "lucide-react";
 import { useState } from "react";
 import parcel from "/images/box.png";
 import pharmaceuticals from "/images/pharmaceutical.png";
+import { useSidebar } from "@/components/ui/sidebar";
 
 export default function HomePage() {
   const [showConntactButton, setShowContactButton] = useState(true);
+    const {
+      // state,
+      open,
+      // setOpen,
+      // openMobile,
+      // setOpenMobile,
+      // isMobile,
+      // toggleSidebar,
+    } = useSidebar();
   return (
     <>
       {" "}
       <div className="min-h-screen w-full">
         {/* Navbar */}
         <Navbar />{" "}
-        
-        <div className="max-w-7xl md:ml-8 mx-auto px-8 py-6 pt-24">
+
+        <div className={`${open ? 'ml-60':'md:ml-8'}  transition-all ease-in-out duration-300 max-w-7xl  mx-auto px-8 py-6 pt-24`}>
           {/* Main Content */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text Content */}
