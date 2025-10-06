@@ -1,20 +1,21 @@
 import Navbar from "@/components/layout/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Box, MessageSquare, Star, X } from "lucide-react";
+import { MessageSquare, Star, X } from "lucide-react";
+import { useState } from "react";
 import parcel from "/images/box.png";
 import pharmaceuticals from "/images/pharmaceutical.png";
-import { useState } from "react";
 
 export default function HomePage() {
   const [showConntactButton, setShowContactButton] = useState(true);
   return (
     <>
       {" "}
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-purple-100">
+      <div className="min-h-screen w-full">
         {/* Navbar */}
         <Navbar />{" "}
-        <div className="max-w-7xl mx-auto px-8 py-6 pt-24">
+        
+        <div className="max-w-7xl md:ml-8 mx-auto px-8 py-6 pt-24">
           {/* Main Content */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text Content */}
@@ -33,15 +34,15 @@ export default function HomePage() {
               </p>
 
               {/* Service Cards */}
-              <div className="flex gap-4 pt-18">
-                <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer bg-white border-0">
+              <div className="flex gap-4 pt-2">
+                <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer bg-blue-600/20 border-0">
                   <div className="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-3">
                     <img src={parcel} width={50} alt="parcel" />
                   </div>
                   <p className="font-semibold text-gray-900">Parcels</p>
                 </Card>
 
-                <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer bg-blue-600/40 border-0">
+                <Card className="p-6 hover:shadow-lg transition-shadow cursor-pointer bg-blue-600/20 border-0">
                   <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-3">
                     <img src={pharmaceuticals} width={50} alt="medicine" />
                   </div>
@@ -117,7 +118,7 @@ export default function HomePage() {
         <div className="relative">
           <div
             onClick={() => setShowContactButton(!setShowContactButton)}
-            className="p-1.5 hover:bg-blue-600/10 cursor-pointer active:bg-blue-600/20 rounded-lg fixed bottom-22  right-4"
+            className="p-1.5 z-50 hover:bg-blue-600/10 cursor-pointer active:bg-blue-600/20 rounded-lg fixed bottom-22  right-4"
           >
             <X size={18} />
           </div>{" "}

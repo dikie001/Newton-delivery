@@ -1,17 +1,31 @@
-import { AlignJustify, Search } from "lucide-react";
-import { useNavigate } from "react-router-dom";
-import { Button } from "../ui/button";
+import { useSidebar } from "@/components/ui/sidebar";
+import { AlignJustify } from "lucide-react";
+import { AppSidebar } from "./side-bar";
 
 const Navbar = () => {
-    const navigate = useNavigate()
+  const {
+    // state,
+    open,
+    // setOpen,
+    // openMobile,
+    setOpenMobile,
+    // isMobile,
+    // toggleSidebar,
+  } = useSidebar();
   return (
     <div
-      className="fixed top-0 w-full p-4 bg-gradient-to-br from-purple-50 via-blue-50 to-purple-100 shadow z-50
+      className="fixed   w-full rounded-lg p-4  shadow  z-50 backdrop-blur-xl
     "
     >
+      {" "}
+      <AppSidebar />
       {/* Header */}
-      <header className="flex items-center justify-between  ">
-        <div className="flex items-center gap-2">
+      <header
+        className={`flex ml-4 items-center justify-between ${
+          open && "ml-56"
+        } transition-all ease-in duration-300`}
+      >
+        <div className="flex items-center gap-2 ml-8">
           <span className="text-3xl font-bold">
             <span className="text-blue-600">N</span>
             <span className="text-gray-800">ewton </span>
@@ -20,24 +34,14 @@ const Navbar = () => {
           </span>
         </div>
 
-        <nav className=" hidden md:flex items-center gap-8">
-          <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">
-            Home
-          </a>
-          <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">
-            Services
-          </a>
-          <Button variant="ghost" size="icon" className="rounded-full">
-            <Search className="h-5 w-5" />
-          </Button>
-        </nav>
-
         {/* <Button onClick={()=>navigate("request-pickup")} variant="default">Request Pickup</Button> */}
-      <AlignJustify/>
+        <AlignJustify
+          className="lg:hidden"
+          onClick={() => setOpenMobile(true)}
+        />
       </header>
-
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

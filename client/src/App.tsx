@@ -1,11 +1,15 @@
-import AppRoutes from "./routes"
+import { SidebarProvider } from "@/components/ui/sidebar";
+import AppRoutes from "./routes";
 
-const App = () => {
+const App = ({ children }: { children: React.ReactNode }) => {
   return (
-    <>
-    <AppRoutes/>
-    </>
-  )
-}
+    <SidebarProvider>
+      <AppRoutes/>
+      <main>
+        {children}
+      </main>
+    </SidebarProvider>
+  );
+};
 
 export default App
