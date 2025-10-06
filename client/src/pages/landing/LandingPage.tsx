@@ -1,45 +1,15 @@
+import Navbar from "@/components/layout/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Search, MessageSquare, Star } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { MessageSquare, Star } from "lucide-react";
 
 export default function LandingPage() {
-  const navigate = useNavigate()
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-purple-100">
-      <div className="max-w-7xl mx-auto px-8 py-6">
-        {/* Header */}
-        <header className="flex items-center justify-between mb-6">
-          <div className="flex items-center gap-2">
-            <span className="text-3xl font-bold">
-              <span className="text-yellow-500">N</span>
-              <span className="text-gray-800">ewton </span>
-              <span className="text-yellow-500">D</span>
-              <span className="text-gray-800">elivery</span>
-            </span>
-          </div>
+      {/* Navbar */}
+      <Navbar />{" "}
 
-          <nav className=" hidden md:flex items-center gap-8">
-            <a
-              href="#"
-              className="text-gray-700 hover:text-gray-900 font-medium"
-            >
-              Home
-            </a>
-            <a
-              href="#"
-              className="text-gray-700 hover:text-gray-900 font-medium"
-            >
-              Services
-            </a>
-            <Button variant="ghost" size="icon" className="rounded-full">
-              <Search className="h-5 w-5" />
-            </Button>
-          </nav>
-
-          <Button variant="default">Request Pickup</Button>
-        </header>
-
+      <div className="max-w-7xl mx-auto px-8 py-6 pt-20">
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Text Content */}
