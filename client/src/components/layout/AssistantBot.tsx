@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { MessageCircle, X, Send, Minimize2 } from "lucide-react";
+import { MessageCircle, X, Send, Minimize2, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -201,7 +201,7 @@ export default function AssistantBotavatar() {
           setIsMinimized(false);
         }}
         size="icon"
-        className={`h-14 w-14 rounded-full shadow-lg transition-transform hover:scale-110 ${
+        className={`h-14 w-14 rounded-3xl shadow-lg transition-transform hover:scale-110 ${
           isOpen
             ? "bg-gray-200 hover:bg-gray-300 text-gray-700"
             : "bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white"
@@ -210,7 +210,7 @@ export default function AssistantBotavatar() {
         {isOpen ? (
           <X className="h-6 w-6" />
         ) : (
-          <MessageCircle className="h-6 w-6" />
+          <MessageSquare className="h-6 w-6" />
         )}
       </Button>
     </div>

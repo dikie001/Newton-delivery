@@ -1,15 +1,12 @@
+import AssistantBot from "@/components/layout/AssistantBot";
 import Navbar from "@/components/layout/Navbar";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { MessageSquare, Star, X } from "lucide-react";
-import { useState } from "react";
+import { useSidebar } from "@/components/ui/sidebar";
+import { Star } from "lucide-react";
 import parcel from "/images/box.png";
 import pharmaceuticals from "/images/pharmaceutical.png";
-import { useSidebar } from "@/components/ui/sidebar";
-import AssistantBot from "@/components/layout/AssistantBot";
 
 export default function HomePage() {
-  const [showConntactButton, setShowContactButton] = useState(true);
     const {
       // state,
       open,
@@ -125,7 +122,7 @@ export default function HomePage() {
         </div>
       </div>
       {/* Floating Message Icon */}
-      {showConntactButton && (
+      {/* {showConntactButton && (
         <div className="relative">
           <div
             onClick={() => setShowContactButton(!setShowContactButton)}
@@ -140,7 +137,7 @@ export default function HomePage() {
             <MessageSquare size={24} />
           </Button>
         </div>
-      )}
+      )} */}
       <AssistantBot/>
     </>
   );
