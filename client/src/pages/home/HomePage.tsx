@@ -6,6 +6,7 @@ import { useState } from "react";
 import parcel from "/images/box.png";
 import pharmaceuticals from "/images/pharmaceutical.png";
 import { useSidebar } from "@/components/ui/sidebar";
+import AssistantBot from "@/components/layout/AssistantBot";
 
 export default function HomePage() {
   const [showConntactButton, setShowContactButton] = useState(true);
@@ -140,6 +141,7 @@ export default function HomePage() {
           </Button>
         </div>
       )}
+      <AssistantBot/>
     </>
   );
 }
