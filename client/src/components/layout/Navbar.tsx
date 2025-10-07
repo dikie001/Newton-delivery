@@ -22,7 +22,7 @@ const Navbar = () => {
       {/* Header */}
       <header
         className={`flex ml-4 items-center justify-between ${
-          open && "ml-56"
+          open && "md:ml-56"
         } transition-all ease-in duration-300`}
       >
         <div className="flex items-center gap-2 md:ml-8">

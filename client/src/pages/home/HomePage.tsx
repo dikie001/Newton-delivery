@@ -26,7 +26,7 @@ export default function HomePage() {
         {/* Navbar */}
         <Navbar />{" "}
 
-        <div className={`${open ? 'ml-60':'md:ml-8'}  transition-all ease-in-out duration-300 max-w-7xl  mx-auto px-8 py-6 pt-24`}>
+        <div className={`${open ? 'md:ml-60':'md:ml-8'}  transition-all ease-in-out duration-300 max-w-7xl  mx-auto px-8 py-6 pt-24`}>
           {/* Main Content */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text Content */}
